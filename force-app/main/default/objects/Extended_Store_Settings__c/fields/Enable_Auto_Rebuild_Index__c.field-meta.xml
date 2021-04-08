@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enable_Auto_Rebuild_Index__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>When checked, programmatic changes that require the store&apos;s search index to be rebuilt will trigger a call to do so.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>When checked, programmatic changes that require the store&apos;s search index to be rebuilt will trigger a call to do so.</inlineHelpText>
+    <label>Enable Auto Rebuild Index</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>
