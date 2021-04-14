@@ -119,7 +119,7 @@ public without sharing class B2BProductService {
         }
         
         // Get PricebookEntries
-        List<PricebookEntry> pricebookEntries = [SELECT Id, Product2.Id, Product2.Name, Product2.Item_Number__c, Product2.Pallet_Size__c, Product2.Percent_Protein__c, Pallet_Price__c, UnitPrice, isActive, Pricebook2.Id
+        List<PricebookEntry> pricebookEntries = [SELECT Id, Product2.Id, Product2.Name, Product2.Item_Number__c, Product2.Pallet_Size__c, Product2.Percent_Protein__c, Product2.Order_Requirements__c, Pallet_Price__c, UnitPrice, isActive, Pricebook2.Id
                                                  FROM PricebookEntry 
                                                  WHERE Pricebook2.Id IN :pricebookIds
                                                     AND Product2.Id IN :policyProductIds
