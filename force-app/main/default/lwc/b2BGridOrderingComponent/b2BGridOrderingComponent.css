@@ -69,3 +69,11 @@ th, td {
       flex-direction: column;
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .orderRequirements,
+  .percentProtein,
+  .palletPrice {
+    display: none;
+  }
+}

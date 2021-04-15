@@ -14,11 +14,11 @@
                         <thead>
                             <tr>
                                 <th>Product</th>
-                                <th class="align-center">Order Requirements</th>
-                                <th class="align-center">Percent Protein</th>
-                                <th class="align-center">Pallet Size</th>
-                                <th class="align-right">Pallet Price</th>
-                                <th class="align-right">Price</th>
+                                <th class="align-center orderRequirements">Order Requirements</th>
+                                <th class="align-center percentProtein">Percent Protein</th>
+                                <th class="align-center palletSize">Pallet Size</th>
+                                <th class="align-right palletPrice">Pallet Price</th>
+                                <th class="align-right nonpalletPrice">Price</th>
                                 <th class="align-center product-quantity">Quantity</th>
                             </tr>
                         </thead>
@@ -26,11 +26,11 @@
                             <template for:each={category.products} for:item="product">
                                 <tr key={product.product.Id}>
                                     <td>{product.product.Name}</td>
-                                    <td class="align-center">{product.product.Order_Requirements__c}</td>
-                                    <td class="align-center">{product.product.Percent_Protein__c}</td>
-                                    <td class="align-center">{product.product.Pallet_Size__c}</td>
-                                    <td class="align-right"><lightning-formatted-number value={product.palletPrice} format-style="currency"></lightning-formatted-number></td>
-                                    <td class="align-right"><lightning-formatted-number value={product.price} format-style="currency"></lightning-formatted-number></td>
+                                    <td class="align-center orderRequirements">{product.product.Order_Requirements__c}</td>
+                                    <td class="align-center percentProtein">{product.product.Percent_Protein__c}</td>
+                                    <td class="align-center palletSize">{product.product.Pallet_Size__c}</td>
+                                    <td class="align-right palletPrice"><lightning-formatted-number value={product.palletPrice} format-style="currency"></lightning-formatted-number></td>
+                                    <td class="align-right nonpalletPrice"><lightning-formatted-number value={product.price} format-style="currency"></lightning-formatted-number></td>
                                     <td class="align-center product-quantity">
                                         <lightning-input 
                                             type="number" 
