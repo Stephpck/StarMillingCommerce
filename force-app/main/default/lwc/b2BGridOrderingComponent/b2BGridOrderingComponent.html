@@ -13,20 +13,19 @@
                     <table>
                         <thead>
                             <tr>
-                                <th>Product</th>
-                                <th class="align-center orderRequirements">Order Requirements</th>
+                                <th>Product</th>   
                                 <th class="align-center percentProtein">Percent Protein</th>
                                 <th class="align-center palletSize">Pallet Size</th>
                                 <th class="align-right palletPrice">Pallet Price</th>
                                 <th class="align-right nonpalletPrice">Price</th>
                                 <th class="align-center product-quantity">Quantity</th>
+                                <th class="align-center orderRequirements">Order Requirements</th>
                             </tr>
                         </thead>
                         <tbody>
                             <template for:each={category.products} for:item="product">
                                 <tr key={product.product.Id}>
                                     <td>{product.product.Name}</td>
-                                    <td class="align-center orderRequirements">{product.product.Order_Requirements__c}</td>
                                     <td class="align-center percentProtein">{product.product.Percent_Protein__c}</td>
                                     <td class="align-center palletSize">{product.product.Pallet_Size__c}</td>
                                     <td class="align-right palletPrice"><lightning-formatted-number value={product.palletPrice} format-style="currency"></lightning-formatted-number></td>
@@ -43,6 +42,7 @@
                                             onblur={handleInputBlur}
                                             disabled={isCartLocked}></lightning-input>
                                     </td>
+                                    <td class="align-center orderRequirements">{product.product.Order_Requirements__c}</td>
                                 </tr>
                             </template>
                         </tbody>
